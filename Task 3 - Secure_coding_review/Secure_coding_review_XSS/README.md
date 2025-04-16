@@ -21,15 +21,15 @@ There are 3 major types of XSS:
 - Markupsafe
 Install Flask:
 
-```command prompt
- >> pip install Flask
+Bash
+ `pip install Flask`
 
- >> pip install markupsafe
+ `pip install markupsafe`
 
 ---
 
 ## Run the XSS vulnerable code
-    python xss.py
+    `python xss.py`
 
 ---
 
@@ -41,5 +41,23 @@ Install Flask:
 
 ---
 
-## Run the XSS fixed code
-    >> Again try the payloads with the fixed code.
+## Run the XSS fixed code and the payloads
+
+    `python xss_fixed.py`
+    
+1. http://127.0.0.1:5000/?name=<script>alert('XSS')</script>
+
+2. http://127.0.0.1:5000/?name=";alert('XSS');//
+
+---
+
+### Outputs
+
+- Payload 1 output
+![Image](https://github.com/user-attachments/assets/6d93f7d0-e065-467f-98f9-ed1d62e3a5ab)
+
+- Payload 2 output
+![Image](https://github.com/user-attachments/assets/60d56e75-a589-4439-8308-0d928c5704cf)
+
+- XSS Fixed output
+![Image](https://github.com/user-attachments/assets/366fd875-370d-40e5-bc20-c5832ce7c53e)
